@@ -25,7 +25,7 @@ Starter bot verified locally.
    - The query is embedded using `GoogleGenerativeAIEmbeddings` (`models/gemini-embedding-001`).
    - Relevant chunks are retrieved from the vector store via similarity search (`top_k=4`).
    - Retrieved chunks are assembled into a context prompt with citation markers (`[1]`, `[2]`, etc.).
-   - Gemini (`gemini-2.5-flash`) generates the grounded answer with citations or emits the fallback phrase if not found in the documents.
+   - Gemini (`gemini-3.8-flash`) generates the grounded answer with citations or emits the fallback phrase if not found in the documents.
 
 2. **Why did I choose this chunk size and overlap?**
    - `CHUNK_SIZE = 800`: Balanced size preserving semantic context across paragraphs while fitting comfortably within the model's retrieval window.
